@@ -7,15 +7,15 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">     
         <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-		<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/leaflet-sidebar.min.css">
-		<link rel="stylesheet" href="css/leaflet.draw.css">
+	<link rel="stylesheet" href="css/leaflet.draw.css">
         <link rel="stylesheet" href="css/Control.MiniMap.css">
-		<link rel="stylesheet" href="css/easy-button.css">		
-		<link rel="stylesheet" href="css/credits.css">		
-		<link rel="stylesheet" href="css/credits2.css">	
+	<link rel="stylesheet" href="css/easy-button.css">		
+	<link rel="stylesheet" href="css/credits.css">		
+	<link rel="stylesheet" href="css/credits2.css">	
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
-		<link rel="stylesheet" href="css/L.Control.Locate.min.css">
+	<link rel="stylesheet" href="css/L.Control.Locate.min.css">
 <style>
 html, body, #map {
 	width: 100%;
@@ -63,11 +63,11 @@ html, body, #map {
 <!-------------------------------------------- SIDEBAR ENDE --------------------------------------------------------------------------->
 
 <!-- JS-Daten LADEN -->
-		<script src="js/leaflet.js"></script>
-		<script src="js/leaflet-sidebar.js"></script>
-		<script src="js/togeojson.js"></script>
-		<script src="js/leaflet.filelayer.js"></script>		
-		<script src="js/multi-style-layer.js"></script>
+	<script src="js/leaflet.js"></script>
+	<script src="js/leaflet-sidebar.js"></script>
+	<script src="js/togeojson.js"></script>
+	<script src="js/leaflet.filelayer.js"></script>		
+	<script src="js/multi-style-layer.js"></script>
         <script src="js/leaflet-svg-shape-markers.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet-hash.js"></script>
@@ -76,8 +76,8 @@ html, body, #map {
         <script src="js/Leaflet.draw.js"></script>
         <script src="js/Leaflet.Draw.Event.js"></script>    
         <script src="js/Toolbar.js"></script>
-		<script src="js/Tooltip.js"></script>
-		<script src="js/L.Control.Locate.min.js"></script>		
+	<script src="js/Tooltip.js"></script>
+	<script src="js/L.Control.Locate.min.js"></script>		
         <script src="js/ext/GeometryUtil.js"></script>
         <script src="js/ext/LatLngUtil.js"></script>
         <script src="js/ext/LineUtil.Intersect.js"></script>
@@ -107,7 +107,7 @@ html, body, #map {
         <script src="js/leaflet.snap.js"></script>
         <script src="js/leaflet.geometryutil.js"></script>
         <script src="js/easy-button.js"></script>		
-	    <script src="js/Control.MiniMap.js"></script>
+	<script src="js/Control.MiniMap.js"></script>
         <script src="js/FileSaver.js"></script>	
         <script src="js/jquery.min.js"></script>	
         <script src="js/credits.js"></script>
@@ -142,14 +142,6 @@ html, body, #map {
         layer_GoogleSatellite;
 		L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
 //----------------------------------------------LAYER--------------------------------------------------------------
-
-
-
-
-
-
-
-
 //-------------------------------------------LAYER ENDE------------------------------------------------------------
 //Sidebar Control//
         var sidebar = L.control.sidebar({
@@ -287,7 +279,8 @@ var LeafIcon = L.Icon.extend({
 		};
 //Credits
 		var credctrl = L.controlCredits({
-			image: "images/helm1.svg",			
+			image: "images/helm1.svg",
+			text:"35 Jahre Lord Helmchen",
 		}).addTo(map);
 //Karte drucken
 		L.control.browserPrint({
@@ -298,7 +291,6 @@ var LeafIcon = L.Icon.extend({
 					]
 		}).addTo(map);
 		map.on("browser-print-start", function(e){
-			/*on print start we already have a print map and we can create new control and add it to the print map to be able to print custom information */
 			L.control.scale({position: 'bottomleft', imperial:false}).addTo(e.printMap);
 		});
 		L.Control.BrowserPrint.Utils.registerLayer(L.TileLayer.WMS, 'L.TileLayer.WMS', function(layer) {
@@ -306,8 +298,8 @@ var LeafIcon = L.Icon.extend({
 			return L.tileLayer.wms(layer._url, layer.options);
 		});
 //Minimap
-//		var osm2 = new L.TileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {minZoom: 0, maxZoom: 30, attribution: ''});
-//		var miniMap = new L.Control.MiniMap(osm2,{ toggleDisplay: true, position:'topleft'}).addTo(map);
+		var osm2 = new L.TileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {minZoom: 0, maxZoom: 30, attribution: ''});
+		var miniMap = new L.Control.MiniMap(osm2,{ toggleDisplay: true, position:'topleft'}).addTo(map);
 //Scale
 		L.control.scale({imperial:false}).addTo(map);
 var legend = L.control({
