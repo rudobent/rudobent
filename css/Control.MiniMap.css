@@ -1,0 +1,94 @@
+.leaflet-control-minimap {
+	box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.2);    
+	padding: 4px; width: 10px; margin: 10px;
+	border-top-left-radius: 2px;
+    	border-top-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+    	border-bottom-right-radius: 2px;
+	background: white;
+	transition: all .6s;
+	margin-left: 12px;
+	border-radius: 2px;
+}
+.leaflet-control-minimap a {
+	background-color: rgba(255, 255, 255, 1.0);
+	background-repeat: no-repeat;
+	z-index: 99999;
+	transition: all .6s;
+}
+.leaflet-control-minimap a.minimized-bottomright {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+	border-radius: 2px;
+}
+#map > div.leaflet-control-container > div.leaflet-top.leaflet-left > div.leaflet-control-minimap.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom.leaflet-control{
+	margin-left:12px;
+	margin-top:12px;
+}
+.leaflet-control-minimap a.minimized-topleft {
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	border-radius: 2px;
+}
+
+.leaflet-control-minimap a.minimized-bottomleft {
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+	border-radius: 2px;
+}
+
+.leaflet-control-minimap a.minimized-topright {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	border-radius: 2px;
+}
+
+.leaflet-control-minimap-toggle-display{
+	background-image: url("images/toggle.svg");
+	background-size: cover;
+	position: absolute;
+	border-radius: 30px 0px 0px 0px;
+}
+
+.leaflet-oldie .leaflet-control-minimap-toggle-display{
+	background-image: url("images/toggle.png");
+}
+
+.leaflet-control-minimap-toggle-display-bottomright {
+	bottom: 0;
+	right: 0;
+}
+
+.leaflet-control-minimap-toggle-display-topleft{
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.leaflet-control-minimap-toggle-display-bottomleft{
+	bottom: 0;
+	left: 0;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.leaflet-control-minimap-toggle-display-topright{
+	top: 0;
+	right: 0;
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+
+/* Old IE */
+.leaflet-oldie .leaflet-control-minimap {
+	border: 1px solid #999;
+}
+
+.leaflet-oldie .leaflet-control-minimap a {
+	background-color: #fff;
+}
+
+.leaflet-oldie .leaflet-control-minimap a.minimized {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
